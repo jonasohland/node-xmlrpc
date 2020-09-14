@@ -62,7 +62,7 @@ declare module 'xmlrpc' {
         }
 
         type ServerFunction = (error: any, params: any, callback: (error: any, value: any) => void) => void;
-        type ServerNotFoundFunction = (methodName: string, params: any[]) => void;
+        type ServerNotFoundFunction = (methodName: string, params: any[], callback: (error: any, value: any) => void) => void;
 
         interface Server extends EventEmitter {
             httpServer: HttpServer | HttpsServer;
